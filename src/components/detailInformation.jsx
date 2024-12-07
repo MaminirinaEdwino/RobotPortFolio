@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+
 export default function DetailsInformation({
   title,
   details,
@@ -5,8 +7,20 @@ export default function DetailsInformation({
   position,
 }) {
   return (
-    <article className="w-full  space-x-1 flex justify-around m-auto my-auto text-white mb-5">
-      <div className="sm:max-w-[400px] w-[45%] backdrop-blur p-3 border-b-2 border-r-2 border-blue-700">
+    <motion.article 
+    initial={{
+      paddingLeft: 300,
+      paddingRight: 300
+    }}
+    whileInView={{
+      paddingLeft:0,
+      paddingRight:0,
+      transition:{
+        duration: .5,
+      }
+    }}
+    className="w-full  space-x-1 flex justify-around m-auto my-auto text-white mb-5">
+      <div className="sm:max-w-[400px] w-[45%]  backdrop-blur p-3 border-b-2 border-r-2 border-blue-700">
         {position % 2 == 0 ? (
           <div>
             <h1 className="text-3xl font-bold text-blue-700">{title}</h1> <p>{details}</p>
@@ -24,6 +38,6 @@ export default function DetailsInformation({
             <div className="text-9xl transition-all duration-150 flex justify-center items-center hover:text-blue-700">{icons}</div>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }

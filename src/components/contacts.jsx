@@ -31,7 +31,7 @@ export default function Contacts() {
     },
   ]);
   return (
-    <section className="w-full h-dvh mt-20 pt-16 p-5">
+    <section className="w-full h-dvh mt-20 pt-16 p-5" id="contacts">
       <h1 className="text-white text-5xl font-bold ">
         You can Contact me with my :{" "}
       </h1>

@@ -1,5 +1,4 @@
 import Project from "./project"
-import { motion } from "motion/react";
 export default function Projects() {
     const listProject = [
         {
@@ -16,17 +15,9 @@ export default function Projects() {
         }
     ]
     return <section id="projects" >
-        <motion.h1 
-        initial={{
-            width:0
-        }}
-        whileInView={{
-            width: "auto",
-            transition:{
-                transition: 2,
-            }
-        }}
-        className="text-5xl text-white font-bold text-center mt-10 mb-10">PROJECTS</motion.h1>
+        <h1 
+        
+        className="text-5xl text-white font-bold text-center mt-10 mb-10">PROJECTS</h1>
         <div className="flex flex-wrap gap-5 justify-around">
             {listProject.map((project, i)=><Project i={i} title={project.title} link={project.link} key={project.link+i}/>)}
         </div>

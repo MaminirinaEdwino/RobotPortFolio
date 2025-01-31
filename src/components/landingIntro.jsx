@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+
 
 export default function LandingIntro() {
   return (
@@ -10,32 +10,16 @@ export default function LandingIntro() {
         And If you want to More you can navigate in the page, and I hope you will like it !
       </p>
       <div className="space-x-10">
-        <motion.a 
-        initial={{
-          height:0
-        }}
-        whileInView={{
-          height:"auto",
-          transition:{
-            duration: .5
-          }
-        }}
+        <a 
+        
         href="#aboute_me" className=" overflow-hidden p-2 px-5 hover:border transition-all duration-200 box-border bg-blue-600 rounded-lg">
           More
-        </motion.a>
-        <motion.a 
-        initial={{
-          height:0
-        }}
-        whileInView={{
-          height:"auto",
-          transition:{
-            duration: .5
-          }
-        }}
+        </a>
+        <a 
+        
         href="#contacts" className=" overflow-hidden p-2 px-5 hover:border transition-all duration-200 box-border bg-blue-600 rounded-lg">
           Contact
-        </motion.a>
+        </a>
       </div>
     </section>
   );

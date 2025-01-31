@@ -2,7 +2,6 @@ import { BiBrain } from "react-icons/bi"
 import { CiLocationArrow1 } from "react-icons/ci"
 import { PiStudent } from "react-icons/pi"
 import DetailsInformation from "./detailInformation"
-import { motion } from "motion/react"
 import { useState } from "react"
 
 export default function AboutMe() {
@@ -25,18 +24,10 @@ export default function AboutMe() {
     ]) 
     return <section className="w-full h-dvh pt-16 flex flex-col mb-52" id="about_me">
         
-        <motion.h1 
-        initial={{
-            width:0
-        }}
-        whileInView={{
-            width: "auto",
-            transition:{
-                transition: 2,
-            }
-        }}
+        <h1 
+        
 
-        className="text-white text-5xl  font-bold text-center mb-10">ABOUT ME</motion.h1>
+        className="text-white text-5xl  font-bold text-center mb-10">ABOUT ME</h1>
         {informationList.map((info, i)=><DetailsInformation title={info.title} details={info.details} icons={info.icon} key={info.title+i} position={i}/>)}
     </section>
 }
